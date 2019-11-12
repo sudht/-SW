@@ -7,19 +7,19 @@ public class FileDAO {
 	private Connection con;
 	
 	public FileDAO() {
-		String url="jdbc:oracle:thin:@localhost:1521:orcl"; /* 11g express editionÀº orcl ´ë½Å XE¸¦ ÀÔ·ÂÇÑ´Ù. */
-		String userid="rmdrkdgh";
-		String pwd="rkdgh5909";
-		try { /* µå¶óÀÌ¹ö¸¦ Ã£´Â °úÁ¤ */
+		String url="jdbc:oracle:thin:@localhost:1521:orcl"; /* 11g express editionì€ orcl ëŒ€ì‹  XEë¥¼ ì…ë ¥í•œë‹¤. */
+		String userid="USERID";
+		String pwd="USERPW";
+		try { /* ë“œë¼ì´ë²„ë¥¼ ì°¾ëŠ” ê³¼ì • */
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println ("µå¶óÀÌ¹ö ·Îµå ¼º°ø");
+			System.out.println ("ë“œë¼ì´ë²„ ë¡œë“œ ì„±ê³µ");
 		} catch(ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		try { /* µ¥ÀÌÅÍº£ÀÌ½º¸¦ ¿¬°áÇÏ´Â °úÁ¤ */
-			System.out.println ("µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á ÁØºñ ...");
+		try { /* ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ì—°ê²°í•˜ëŠ” ê³¼ì • */
+			System.out.println ("ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ì¤€ë¹„ ...");
 			con=DriverManager.getConnection(url, userid, pwd);
-			System.out.println ("µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á ¼º°ø");
+			System.out.println ("ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° ì„±ê³µ");
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
